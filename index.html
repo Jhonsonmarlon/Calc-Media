@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title> Imersão Dev Alura - Aula 01</title>
+    <link rel=icon href="">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="page-title">
+            Calculadora de média</h1>
+        <p class="page-subtitle">
+            Descubra qual a sua média de nota de todas as provas!
+        </p>
+        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg"
+            class="page-logo" alt="">
+        <p class="page-subtitle2">
+            Digite as suas notas abaixo <br> e calcule sua média !
+        </p>
+    </div>
+    <div class="caixa-notas">
+        <input class="nota1" placeholder="Informe a Nota 1" type="number" id="n1">
+        <input class="nota2" placeholder="Informe a Nota 2" type="number" id="n2">
+        <input class="nota3" placeholder="Informe a Nota 3" type="number" id="n3">
+        <input class="nota4" placeholder="Informe a Nota 4" type="number" id="n4">
+    </div>
+    <div class="botao-calculo">
+        <button onclick='media()'>Calcular</button>
+    </div>
+    <br></br>
+    <div class="resultado-text">
+        <h4>O resultado é ... <span></span> </h4>
+    </div>
+    <script>
+        var n1 = document.querySelector('#n1')
+        var n2 = document.querySelector('#n2')
+        var n3 = document.querySelector('#n3')
+        var n4 = document.querySelector('#n4')
+        var resultado = document.querySelector('span')
+
+        function media() {
+            resultado.innerHTML = (((parseInt(n1.value)) + (parseInt(n2.value)) + (parseInt(n3.value)) + (parseInt(n4.value))) / 4)
+        }
+    </script>
+
+    <div class="imagens-soltas">
+        <img src="https://caelum-online-public.s3.amazonaws.com/imersao-dev-3/bg.png" class="caderno" alt="">
+    </div>
+    <a href="https://alura.com.br/" target="_blank">
+        <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+    </a>
+</body>
+
+</html>
